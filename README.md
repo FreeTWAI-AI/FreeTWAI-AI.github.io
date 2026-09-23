@@ -1,5 +1,21 @@
 # FreeTWAI public project directory
 
+<!-- freedom-repository-guide:start -->
+## 在自由工坊的位置
+
+[自由工坊](https://freetwai.com) 讓會員先完成定位、選擇公會並領取 Repo 技能書，再以供貨、商店、開源作品、行銷與小隊共同完成成果。
+
+自由工坊公開原始碼導覽頁的產生器。 已有受限公開 repo 目錄與靜態 HTML 產生器；目前的目錄資料是導覽清單。
+
+本 repo 不包含會員 Portal、中央 project registry 或 signed-status 服務；本機 build 不代表 Pages 已部署。
+
+本 repo 的維護者負責「自由工坊公開原始碼導覽頁的產生器。」這個模組；公會職稱與自填 GitHub slug 不授予寫入權。
+
+程式／內容入口：[data/directory.json](data/directory.json)、[src/index.mjs](src/index.mjs)、[scripts/build.mjs](scripts/build.mjs)、[test/](test/)。協作先讀 [CONTRIBUTING.md](CONTRIBUTING.md)，讓 Agent 讀 [AGENTS.md](AGENTS.md)；從[本倉 Issues](https://github.com/FreeTWAI-AI/FreeTWAI-AI.github.io/issues)認領、[查看既有 PR](https://github.com/FreeTWAI-AI/FreeTWAI-AI.github.io/pulls)避免重工。
+
+只列可公開的 GitHub 來源與真實狀態；中央平台才保存會員與作品 import 事實。不要在這裡接收 session、token 或私人商品資料。 跨 repo 的協定由[中央平台](https://github.com/FreeTWAI-AI/freedom-platform)維護。
+<!-- freedom-repository-guide:end -->
+
 Source for a simple directory of the nine Freedom repositories. This repository's name can support an organization GitHub Pages site, but the current work **does not enable Pages or deploy a public site**.
 
 With Node 24:
