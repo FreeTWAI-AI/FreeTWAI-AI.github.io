@@ -16,7 +16,7 @@
 只列可公開的 GitHub 來源與真實狀態；中央平台才保存會員與作品 import 事實。不要在這裡接收 session、token 或私人商品資料。 跨 repo 的協定由[中央平台](https://github.com/FreeTWAI-AI/freedom-platform)維護。
 <!-- freedom-repository-guide:end -->
 
-Source for a simple directory of the nine Freedom repositories. This repository's name can support an organization GitHub Pages site, but the current work **does not enable Pages or deploy a public site**.
+Source for a simple directory of the nine Freedom repositories, plus the privacy policy of the 自由工坊 Discord bot (小妹). Pushes to `main` build `dist/` and publish it to the organization GitHub Pages site (https://freetwai-ai.github.io/) through `.github/workflows/pages.yml`; the privacy policy is served at https://freetwai-ai.github.io/privacy/discord-bot/.
 
 With Node 24:
 
@@ -25,6 +25,6 @@ npm test
 npm run build
 ```
 
-The artifact is `dist/index.html`. Entries in `data/directory.json` link only to public GitHub source repositories and state the current limitations. The directory does not claim that a linked project is deployed, reviewed, official or commercially ready. It does not load Platform member sessions, private projects, API credentials or a second project database.
+The artifacts are `dist/index.html` and `dist/privacy/discord-bot/index.html` (policy text in `data/privacy-discord-bot.json`). Entries in `data/directory.json` link only to public GitHub source repositories and state the current limitations. The directory does not claim that a linked project is deployed, reviewed, official or commercially ready. It does not load Platform member sessions, private projects, API credentials or a second project database.
 
-For an individual project's introduction page, use `freedom-project-page` with its checked public manifest. This source navigation list is not a copy of the canonical project registry or a signed-status service. Public release and hosting are separate decisions from building this artifact.
+For an individual project's introduction page, use `freedom-project-page` with its checked public manifest. This source navigation list is not a copy of the canonical project registry or a signed-status service. Publishing this directory on GitHub Pages does not publish or certify any linked project.

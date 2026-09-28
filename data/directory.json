@@ -10,6 +10,6 @@
     { "repository": "freedom-project-template", "name": "新專案模板", "description": "Node 24 的可運行起點，附測試、資料邊界與新專案身分設定指引。", "scope": "每個新專案必須填寫自己的真實 GitHub 身分。" },
     { "repository": "freedom-project-page", "name": "專案介紹頁產生器", "description": "由公開 manifest 產生固定 HTML，保留来源與限制。", "scope": "只產生 artifact；不推定正式狀態或自動發布。" },
     { "repository": ".github", "name": "組織協作規範", "description": "組織介紹、協作表單、共用政策與工作流程起點。", "scope": "組織支援倉；不承載會員與交易資料。" },
-    { "repository": "FreeTWAI-AI.github.io", "name": "專案目錄", "description": "這份九個來源倉的導覽。", "scope": "本次僅建置原始碼與靜態 artifact，未啟用 Pages。" }
+    { "repository": "FreeTWAI-AI.github.io", "name": "專案目錄", "description": "這份九個來源倉的導覽。", "scope": "以 GitHub Pages 發布這份導覽與 Discord 機器人隱私權政策；不代表各專案已上線。" }
   ]
 }

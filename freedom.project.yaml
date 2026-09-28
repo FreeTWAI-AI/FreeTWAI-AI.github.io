@@ -17,10 +17,10 @@
       "Organize public project metadata and repository links"
     ],
     "limitations": [
-      "No site publication or production domain is configured by this bootstrap",
+      "Published only as the organization GitHub Pages site (https://freetwai-ai.github.io/); no custom production domain is configured",
       "Quality and release fields declare intended policy; they do not attest an enforced ruleset or a signed release",
       "NOASSERTION means licensing remains undecided; this metadata grants no additional reuse rights",
-      "github_pages is the intended project-page surface only; Pages and production remain unpublished"
+      "GitHub Pages (via .github/workflows/pages.yml on main) serves the source directory and the Discord bot privacy policy at /privacy/discord-bot/; linked projects are not published or certified by it"
     ]
   },
   "ownership": {
