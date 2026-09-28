@@ -1,0 +1,142 @@
+{
+  "schema_version": "freetwai.privacy-page/v1",
+  "path": "privacy/discord-bot/",
+  "effective_date": "2026-09-28",
+  "contact_email": "ted@ted-h.com",
+  "zh": {
+    "title": "「小妹」Discord 機器人隱私權政策",
+    "eyebrow": "FREETWAI · 自由工坊 DISCORD BOT",
+    "effective": "生效日期：2026 年 9 月 28 日",
+    "sections": [
+      { "h": "這份政策涵蓋什麼", "blocks": [
+        { "p": "本政策說明自由工坊 Discord 小幫手「小妹」（Discord 應用程式名稱 Castle1-Hermes，應用程式 ID 1512175023580778668）如何處理資料。小妹由 Theodore（Ted）Huang（GitHub：teddashh）為 FreeTWAI（自由工坊-AI 自由平台）社群營運，以下稱「營運者」或「我們」。" }
+      ]},
+      { "h": "小妹是什麼", "blocks": [
+        { "p": "小妹是唯讀的繁體中文社群助手，目前安裝在自由工坊 Discord 伺服器與營運者的測試伺服器。她只在真人於營運者指定的頻道或討論串中 @提及她時回應（回覆她的訊息並保留提及，也算提及）。她不處理私訊、不回應其他機器人、不做管理動作，也不主動私訊任何人。唯一的主動發文是指定討論串中的排程貼文：每日平台統計數字，以及取自公開 GitHub 的專案進度更新。" }
+      ]},
+      { "h": "Discord 傳給小妹的資料", "blocks": [
+        { "p": "Discord 會把小妹看得到的頻道中的訊息傳給她；因為本應用程式使用 Message Content（訊息內容）特權意圖，這些訊息包含文字。不在指定頻道、或沒有提及小妹的訊息，只在記憶體中被判斷後即捨棄，不會被儲存。" },
+        { "p": "我們不申請、也不使用 Server Members（伺服器成員）與 Presence（上線狀態）特權意圖：小妹不收集成員名單、加入／離開事件、上線狀態或正在進行的活動。" }
+      ]},
+      { "h": "你使用小妹時，我們處理哪些資料", "blocks": [
+        { "ul": [
+          "你的訊息：文字與附件（附加的圖片會送去做圖片辨識）、你的 Discord 使用者 ID 與顯示名稱，以及頻道、討論串和訊息 ID。",
+          "對話脈絡：同一頻道或討論串中，自小妹上次回覆以來最多 50 則近期訊息（作者顯示名稱與文字；附件只以「附件」字樣代替）；如果你是回覆某則訊息，還包括該訊息附近最多 10 則。這表示當其他人在同一串提及小妹時，沒有提及她的人的訊息也可能被當作脈絡讀取。其他機器人的訊息不會被納入。",
+          "應要求讀取頻道紀錄：有人請小妹整理討論時，她每次最多可讀取目前這個頻道或討論串的 100 則近期訊息（作者顯示名稱、時間、文字、附件檔名），不能讀取其他頻道。",
+          "意見回饋：你提出的建議可能被記錄（摘要、細節、你的使用者 ID 與顯示名稱、頻道 ID），供營運者檢視。",
+          "問題回報（自願）：見下方「公開的 GitHub Issue」。",
+          "管理員功能：少數固定的管理員可以請小妹顯示自由工坊平台的唯讀資料（例如統計數字、公會與小隊清單、會員顯示名稱），這些內容會出現在討論串中，串內的人都看得到；管理員也可以派單，建立引用其本人訊息的 GitHub Issue，並排入營運者的內部工程佇列。"
+        ]}
+      ]},
+      { "h": "誰會處理這些資料", "blocks": [
+        { "ul": [
+          "Google（Gemini 模型）：每次回覆所需的訊息、脈絡與圖片，會送到 Google 產生回覆，這部分處理適用 Google 的條款與隱私權政策。",
+          "網路搜尋服務：需要查資料時，小妹會把搜尋字串（由模型撰寫，可能反映你的提問）送到第三方搜尋／擷取服務（目前為免金鑰的公開端點，例如 Firecrawl、Keenable）。",
+          "GitHub：只用於你或管理員確認後建立的問題回報與派單（公開）。",
+          "Discord：訊息本來就經由 Discord 傳遞，適用 Discord 的隱私權政策。"
+        ]},
+        { "p": "除了上述為提供服務所需的處理者之外，我們不出售、出租或分享你的資料，也不拿去做廣告。我們不用你的訊息訓練模型。" }
+      ]},
+      { "h": "儲存位置與保存期限", "blocks": [
+        { "ul": [
+          "對話紀錄（你的訊息、脈絡、工具結果與小妹的回覆）存在營運者管理的伺服器上的本機 SQLite 資料庫，檔案只有服務帳號可讀。每日排程會刪除最後活動超過 30 天的對話，所以對話會在最後一次活動後約 30 天（最多約 31 天）內刪除。仍在進行中的對話，會保留較早內容的精簡摘要，直到對話停止活動。",
+          "意見回饋、問題回報草稿與事件紀錄，以及可能含有訊息文字的應用程式日誌：每日刪除超過 30 天的項目。",
+          "下載的圖片：暫存快取在 24 小時內刪除；圖片辨識用的暫存檔在每次處理後刪除。",
+          "維護時若手動製作備份，會在 30 天內刪除。",
+          "例外：公開的 GitHub 內容（見下節），以及 Google、Discord、搜尋服務依其各自政策保存的資料。"
+        ]}
+      ]},
+      { "h": "公開的 GitHub Issue", "blocks": [
+        { "p": "你請小妹回報問題時，她會先貼出草稿，只有在你或管理員明確確認後才送出。送出的 Issue 是公開的，會建立在 FreeTWAI-AI 的公開 repo 之一（freedom-platform、freedom-skill-registry、freedom-storefront、freedom-supplier-client），內容包括：你的 Discord 顯示名稱（不含使用者 ID）、Discord 討論串與訊息連結、問題描述，以及截圖的文字說明。" },
+        { "p": "截圖（來自觸發回報的訊息、它回覆的訊息，或你本人最近 30 分鐘內在該串的訊息，最多 4 張）會先移除中繼資料，再上傳到公開 repo teddashh/freeworkshop-issue-assets。這些公開內容不適用 30 天刪除規則。你提出要求時，我們會刪除該 Issue 並移除檔案，但副本仍可能留在 git 歷史、分支（fork）、快取或第三方封存中。未送出的草稿 24 小時後失效，30 天後刪除。" }
+      ]},
+      { "h": "你的選擇", "blocks": [
+        { "ul": [
+          "小妹只在被提及時回應；不想讓訊息被當成請求處理，就不要 @她。",
+          "當其他人在同一串提及小妹時，你在指定討論串中的訊息仍可能被當作脈絡讀取。若要避免，請不要在這些討論串發言，或請伺服器管理員調整小妹可用的頻道，或移除小妹。",
+          "小妹不處理私訊。"
+        ]}
+      ]},
+      { "h": "查詢與刪除要求", "blocks": [
+        { "p": "請寄信到 ted@ted-h.com，並附上你的 Discord 使用者 ID（以及相關的討論串連結）。我們會刪除相符的對話紀錄、意見回饋、草稿，以及我們可以控制的 GitHub 內容，通常在 30 天內完成。" }
+      ]},
+      { "h": "安全措施", "blocks": [
+        { "p": "機器人權杖與各項憑證存放在伺服器上只有擁有者可讀的檔案中。小妹沒有 shell 或一般檔案存取權限；她對自由工坊平台資料庫的存取是唯讀（只能 SELECT）。伺服器只由營運者管理。沒有任何系統能保證絕對安全。" }
+      ]},
+      { "h": "兒童", "blocks": [
+        { "p": "Discord 規定使用者須年滿 13 歲（或當地法律要求的更高年齡）。小妹不是以兒童為對象設計的服務。" }
+      ]},
+      { "h": "政策變更與聯絡方式", "blocks": [
+        { "p": "本政策如有變更，會更新在這個頁面並標示新的生效日期。有任何問題，請寄信到 ted@ted-h.com，或透過 https://github.com/teddashh 聯絡營運者。" }
+      ]}
+    ]
+  },
+  "en": {
+    "title": "Privacy Policy for the \"小妹\" (Xiaomei) Discord Bot",
+    "eyebrow": "FREETWAI · 自由工坊 DISCORD BOT",
+    "effective": "Effective date: September 28, 2026",
+    "sections": [
+      { "h": "Scope", "blocks": [
+        { "p": "This policy explains how the 自由工坊 (Free Workshop) Discord helper bot \"小妹\" (Xiaomei; Discord application \"Castle1-Hermes\", application ID 1512175023580778668) handles data. The bot is operated by Theodore (Ted) Huang (GitHub: teddashh) for the FreeTWAI (自由工坊-AI 自由平台) community (\"the operator\", \"we\")." }
+      ]},
+      { "h": "What the bot is", "blocks": [
+        { "p": "小妹 is a read-only, Traditional-Chinese community assistant. It is currently installed in the 自由工坊 Discord server and in the operator's test server. It responds only when a human @mentions it (a reply that pings the bot counts as a mention), and only in a fixed list of channels and threads chosen by the operator. It ignores direct messages and other bots, performs no moderation, and never messages anyone on its own. Its only unprompted posts are scheduled posts in designated threads: daily platform statistics and project-progress updates taken from public GitHub activity." }
+      ]},
+      { "h": "What Discord sends to the bot", "blocks": [
+        { "p": "Discord delivers the messages in channels the bot can view. Because this app uses the Message Content privileged intent, those messages include their text. Messages outside the allowlisted channels, or that do not mention the bot, are checked in memory and then discarded; they are not stored." },
+        { "p": "We do not request or use the Server Members or Presence privileged intents. The bot does not collect member lists, join/leave events, online status or activities." }
+      ]},
+      { "h": "What we process when you use the bot", "blocks": [
+        { "ul": [
+          "Your message: text and attachments (attached images are analyzed for image recognition), your Discord user ID and display name, and the channel, thread and message IDs.",
+          "Conversation context: up to 50 recent messages in the same channel or thread posted since the bot's last reply (author display name and text; attachments appear only as a placeholder), plus, when you reply to a message, up to 10 messages around it. This means messages from people who did not mention the bot may be read as context when someone else mentions it in the same thread. Messages from other bots are excluded.",
+          "Channel history on request: when someone asks the bot to summarize a discussion, it can read up to 100 recent messages per request from the current channel or thread only (author display name, time, text, attachment file names). It cannot read other channels.",
+          "Feedback: suggestions you make may be saved (summary, details, your user ID and display name, channel IDs) for the operator to review.",
+          "Bug reports (optional): see \"Public GitHub issues\" below.",
+          "Administrator features: a small, fixed list of administrators can ask the bot to show read-only data from the 自由工坊 platform (for example counts, guild and squad lists, and member display names). This appears in the thread, where anyone in the thread can see it. Administrators can also create work orders, which become GitHub issues quoting the administrator's own message and are queued in the operator's internal engineering queue."
+        ]}
+      ]},
+      { "h": "Who processes the data", "blocks": [
+        { "ul": [
+          "Google (Gemini models): the message, context and images needed for each reply are sent to Google to generate the reply. Google's terms and privacy policy apply to that processing.",
+          "Web search services: when the bot needs to look something up, it sends search queries (written by the model, and possibly reflecting your question) to third-party search/extraction services (currently public keyless endpoints such as Firecrawl and Keenable).",
+          "GitHub: only for bug reports and work orders confirmed by you or an administrator (public).",
+          "Discord: messages travel through Discord, and Discord's privacy policy applies."
+        ]},
+        { "p": "Apart from these processors, which are needed to provide the service, we do not sell, rent or share your data, and we do not use it for advertising. We do not use your messages to train models." }
+      ]},
+      { "h": "Storage and retention", "blocks": [
+        { "ul": [
+          "Conversation records (your messages, context, tool results and the bot's replies) are stored in a local SQLite database on a server run by the operator; the files are readable only by the service account. A daily job deletes conversations whose last activity is more than 30 days old, so a conversation is deleted about 30 days (at most about 31 days) after its last activity. While a conversation is still active, it keeps a condensed summary of its earlier parts.",
+          "Feedback records, bug-report drafts and events, and application logs (which can contain message text): entries older than 30 days are deleted daily.",
+          "Downloaded images: the temporary cache is cleared within 24 hours; temporary image-recognition files are deleted after each request.",
+          "Manual maintenance backups, if any are made, are deleted within 30 days.",
+          "Exceptions: public GitHub content (next section), and data kept by Google, Discord and search services under their own policies."
+        ]}
+      ]},
+      { "h": "Public GitHub issues", "blocks": [
+        { "p": "When you ask the bot to report a problem, it first posts a draft, and files it only after you or an administrator explicitly confirms. A filed issue is public, in one of the FreeTWAI-AI public repositories (freedom-platform, freedom-skill-registry, freedom-storefront, freedom-supplier-client). It includes your Discord display name (not your user ID), links to the Discord thread and message, the problem description, and a text description of any screenshots." },
+        { "p": "Screenshots (from the triggering message, the message it replies to, or your own messages in that thread from the last 30 minutes; up to 4) have their metadata stripped and are uploaded to the public repository teddashh/freeworkshop-issue-assets. This public content is not subject to the 30-day deletion. On request we will delete the issue and remove the files, but copies may remain in git history, forks, caches or third-party archives. Unconfirmed drafts expire after 24 hours and are deleted after 30 days." }
+      ]},
+      { "h": "Your choices", "blocks": [
+        { "ul": [
+          "The bot responds only when mentioned. If you don't want your message handled as a request, don't @mention it.",
+          "Your messages in allowlisted threads may still be read as context when others mention the bot there. To avoid this, don't post in those threads, or ask the server administrators to change the bot's channels or remove the bot.",
+          "The bot ignores direct messages."
+        ]}
+      ]},
+      { "h": "Access and deletion requests", "blocks": [
+        { "p": "Email ted@ted-h.com with your Discord user ID (and any relevant thread links). We will delete matching conversation records, feedback, drafts, and GitHub content we control, normally within 30 days." }
+      ]},
+      { "h": "Security", "blocks": [
+        { "p": "The bot token and other credentials are kept in owner-only files on the server. The bot has no shell or general file access, and its access to the 自由工坊 platform database is read-only (SELECT-only). Only the operator administers the server. No system is perfectly secure." }
+      ]},
+      { "h": "Children", "blocks": [
+        { "p": "Discord requires users to be at least 13 (or older where local law requires). The bot is not directed at children." }
+      ]},
+      { "h": "Changes and contact", "blocks": [
+        { "p": "If this policy changes, the new version will be posted on this page with an updated effective date. For questions, email ted@ted-h.com or reach the operator via https://github.com/teddashh." }
+      ]}
+    ]
+  }
+}
