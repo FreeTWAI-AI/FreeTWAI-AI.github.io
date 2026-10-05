@@ -1,4 +1,4 @@
-const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
+const escapeHtml = String;
 
 export function validateDirectory(input) {
   if (input?.schema_version !== 'freedom.source-directory/v1' || input.organization !== 'FreeTWAI-AI' || !Array.isArray(input.projects) || input.projects.length > 100) throw new TypeError('Expected the FreeTWAI-AI public source directory');
