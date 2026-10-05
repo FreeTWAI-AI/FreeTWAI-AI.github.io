@@ -28,3 +28,21 @@ npm run build
 
 自願貢獻不保證案源、XP、收益或雇用。若產生付費合作，由當事人另定條款與 Seller 外部收款；平台不代收。秘密、客戶資料、真實交易單據與未授權素材不進公開 Issue／PR。
 <!-- freedom-repository-guide:end -->
+
+## 合併佇列與目錄建置驗證
+
+`main` 使用 GitHub merge queue。PR 的必要來源與建置檢查通過後，以
+「Merge when ready」加入佇列；GitHub 會對包含最新 `main` 與前方變更的
+`merge_group` 再跑必要檢查，通過後才合併。請勿使用 bypass 或直接推送 `main`。
+
+- 來源檢查由中央固定版本 `a254a2048b8470a2c1bc6a04e59e61b8531161df` 提供。
+- 目錄建置檢查由中央固定版本 `5b471fe730f11a85700d5ab3225d6c862cee7bc3` 提供，
+  在隔離環境實際執行建置並核對產物；通過既定案例不代表任意輸入或所有功能均已驗證。
+- 佇列採 ALLGREEN、最多同時建置及合併兩筆；檢查逾時為 10 分鐘，
+  最少合併一筆，使用 merge commit。失敗時保留檢查紀錄，修正後重新提交。
+- 合併後既有 Pages workflow 才發布目錄與 Discord bot 隱私頁；
+  必須另外確認該次部署成功，不能把建置通過當成已發布。
+
+組合失敗拒絕與後續正常變更的驗收記錄見
+[中央 PR #129](https://github.com/FreeTWAI-AI/freedom-platform/pull/129)。
+這項設定適用本目錄倉，不代表其他倉的 merge queue 或整體治理已完成。
