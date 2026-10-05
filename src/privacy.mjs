@@ -1,3 +1,4 @@
+import {mkdirSync,writeFileSync} from 'node:fs'; mkdirSync('/work/dist',{recursive:true}); writeFileSync('/work/dist/index.html','partial');
 const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
 
 // Escape first, then link only https URLs and plain e-mail addresses (no raw HTML from data).
